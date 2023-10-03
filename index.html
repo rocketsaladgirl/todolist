@@ -25,12 +25,12 @@
         <div class="container">
             <h2>
                 <span>To Do</span>
-                <span class="mask-num">10</span>
+                <span class="mask-num"></span>
             </h2>
             <ul class="mask-list">
                 <li v-for="(mask, index) in needDoList" :key="mask.id"> <!--Добаляем путь и ключ, по которому будут записываться данные-->
                     <div>
-                        <input type="checkbox">
+                        <input type="checkbox" v-on:change="doCheck(index, 'need')">
                         <span>{{ mask.title }}</span> <!--Добаляем интерполяцию-->
                     </div>
                     <button class="btn-remove">Remove</button>
@@ -38,13 +38,13 @@
             </ul>
             <h2>
                 <span>Done</span>
-                <span class="mask-num">10</span>
+                <span class="mask-num"></span>
             </h2>
             <ul class="mask-list complete-list">
-                <li>
+                <li v-for="(mask, index) in completeList" :key="mask.id"> <!--Добаляем путь и ключ, по которому будут записываться данные-->
                     <div>
-                        <input type="checkbox" checked>
-                        <span>Add code</span>
+                        <input type="checkbox" v-on:change="doCheck(index, 'complete')" checked>
+                        <span>{{ mask.title }}</span> <!--Добаляем интерполяцию-->
                     </div>
                     <button class="btn-remove">Remove</button>
                 </li>
