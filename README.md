@@ -1,6 +1,6 @@
 # Простой ToDoList с использованием Vue3.js
 
-![kembang](https://github.com/rocketsaladgirl/kembang-flower-shop/assets/114432448/fc7b909a-c586-4be7-aab5-920637a0dd9a)
+![toDoList](https://github.com/rocketsaladgirl/todolist/assets/114432448/67bd8118-890d-45b3-be38-2c9f9c7c9916)
 
 ## О чем данный проект:
 
