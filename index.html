@@ -11,43 +11,48 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
+    <!--Начало работы приложения / Start App-->
+    <div id="app">
+        <div class="header">
+            <div class="container">
+                <div class="logo">ToDo List</div>
+                <div class="form">
+                    <input type="text" v-bind:value="valueInput" v-on:input="handleInput" v-on:keypress.enter="addTask"> <!--Добавляем хук позволяющий заполнять input-->
+                    <button class="btn" v-on:click="addTask">Add a new task</button> <!--Вешаем событие на кнопку-->
+                </div>
+            </div>
+        </div>
         <div class="container">
-            <div class="logo">ToDo List</div>
-            <form class="form">
-                <input type="text">
-                <button class="btn">Add a new task</button>
-            </form>
+            <h2>
+                <span>To Do</span>
+                <span class="mask-num">10</span>
+            </h2>
+            <ul class="mask-list">
+                <li v-for="(mask, index) in needDoList" :key="mask.id"> <!--Добаляем путь и ключ, по которому будут записываться данные-->
+                    <div>
+                        <input type="checkbox">
+                        <span>{{ mask.title }}</span> <!--Добаляем интерполяцию-->
+                    </div>
+                    <button class="btn-remove">Remove</button>
+                </li>
+            </ul>
+            <h2>
+                <span>Done</span>
+                <span class="mask-num">10</span>
+            </h2>
+            <ul class="mask-list complete-list">
+                <li>
+                    <div>
+                        <input type="checkbox" checked>
+                        <span>Add code</span>
+                    </div>
+                    <button class="btn-remove">Remove</button>
+                </li>
+            </ul>
         </div>
     </div>
-    <div class="container">
-        <h2>
-            <span>To Do</span>
-            <span class="mask-num">10</span>
-        </h2>
-        <ul class="mask-list">
-            <li>
-                <div>
-                    <input type="checkbox">
-                    <span>New video</span>
-                </div>
-                <button class="btn-remove">Remove</button>
-            </li>
-        </ul>
-        <h2>
-            <span>Done</span>
-            <span class="mask-num">10</span>
-        </h2>
-        <ul class="mask-list complete-list">
-            <li>
-                <div>
-                    <input type="checkbox" checked>
-                    <span>Add code</span>
-                </div>
-                <button class="btn-remove">Remove</button>
-            </li>
-        </ul>
-    </div>
+    <!--Конец работы приложения / End App-->
+
     <script src="https://unpkg.com/vue@next"></script> <!--подключаем vue через ссылку-->
     <script src="app.js"></script>
 </body>
