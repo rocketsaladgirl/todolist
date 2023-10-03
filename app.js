@@ -28,6 +28,10 @@ Vue.createApp({
                 const noCompleteMask = this.completeList.splice(index, 1);
                 this.needDoList.push(...noCompleteMask);
             }
+        },
+        removeMask (index, type) {
+            const toDoList = type === 'need' ? this.needDoList : this.completeList;
+            toDoList.splice(index, 1);
         }
 
     }
