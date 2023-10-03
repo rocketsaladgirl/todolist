@@ -7,7 +7,7 @@
 Простой ToDoList с возможностью добавлять и удалять таски. 
 
 Мануал данного проекта можно посмотреть по ссылке на канале Анны Блок:  
-https://www.youtube.com/watch?v=27Vhe78OsCg&list=PL2zhi-fIpnXBzbl5Hl4XSB0KCWOHqBJb8&index=3
+https://boosty.to/annblok
 
 ## Стек на котором построен проект:
 + HTML
@@ -20,4 +20,4 @@ https://www.youtube.com/watch?v=27Vhe78OsCg&list=PL2zhi-fIpnXBzbl5Hl4XSB0KCWOHqB
 + сделать сайт адаптивным;
 + добавить взаимодействие с базой данных для хранения тасков.
 
-С результатом можно ознакомиться по ссылке: [ToDo List](https://rocketsaladgirl.github.io/kembang-flower-shop/).
+С результатом можно ознакомиться по ссылке: [ToDo List](https://rocketsaladgirl.github.io/todolist/).
